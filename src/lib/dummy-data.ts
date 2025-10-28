@@ -1,0 +1,218 @@
+// Dummy data for MVP showcase
+
+export const documents = [
+  {
+    id: '1',
+    name: 'Employment Contract - Tech Corp.pdf',
+    type: 'Employment Agreement',
+    uploadedAt: '2025-10-15',
+    riskScore: 78,
+    status: 'analyzed',
+    clauses: 12,
+    riskyClauseCount: 2,
+  },
+  {
+    id: '2',
+    name: 'NDA - Client Project.docx',
+    type: 'Non-Disclosure Agreement',
+    uploadedAt: '2025-10-20',
+    riskScore: 92,
+    status: 'analyzed',
+    clauses: 8,
+    riskyClauseCount: 0,
+  },
+  {
+    id: '3',
+    name: 'Consultancy Agreement.pdf',
+    type: 'Consultancy Agreement',
+    uploadedAt: '2025-10-25',
+    riskScore: 65,
+    status: 'pending',
+    clauses: 15,
+    riskyClauseCount: 4,
+  },
+]
+
+export const clauseAnalysis = [
+  {
+    id: 1,
+    title: 'Payment Terms',
+    content: 'Payment shall be made within 30 days of invoice date...',
+    riskLevel: 'low',
+    issue: null,
+    suggestion: 'Payment terms are standard and fair.',
+  },
+  {
+    id: 2,
+    title: 'Termination Clause',
+    content: 'Either party may terminate this agreement with 30 days written notice...',
+    riskLevel: 'low',
+    issue: null,
+    suggestion: 'Standard termination clause compliant with Indian Contract Act.',
+  },
+  {
+    id: 3,
+    title: 'Liability Limitation',
+    content: 'Company shall not be liable for any indirect or consequential damages...',
+    riskLevel: 'high',
+    issue: 'May violate Section 73 of Indian Contract Act, 1872',
+    suggestion: 'Consider adding exceptions for gross negligence and willful misconduct.',
+  },
+  {
+    id: 4,
+    title: 'Non-Compete Clause',
+    content: 'Employee agrees not to compete with company for 5 years after termination...',
+    riskLevel: 'high',
+    issue: 'Unreasonably long duration may not be enforceable',
+    suggestion: 'Reduce non-compete period to 1-2 years for better enforceability.',
+  },
+  {
+    id: 5,
+    title: 'Confidentiality',
+    content: 'All confidential information must be kept secure...',
+    riskLevel: 'medium',
+    issue: 'Definition of "confidential information" is vague',
+    suggestion: 'Add specific examples of what constitutes confidential information.',
+  },
+]
+
+export const complianceItems = [
+  {
+    id: 1,
+    title: 'MCA Annual Filing',
+    dueDate: '2025-11-30',
+    category: 'Corporate',
+    status: 'upcoming',
+    priority: 'high',
+    description: 'Annual return filing with Ministry of Corporate Affairs',
+  },
+  {
+    id: 2,
+    title: 'GST Return - October',
+    dueDate: '2025-11-20',
+    category: 'Tax',
+    status: 'upcoming',
+    priority: 'high',
+    description: 'Monthly GST return filing',
+  },
+  {
+    id: 3,
+    title: 'Trademark Renewal',
+    dueDate: '2026-01-15',
+    category: 'IP',
+    status: 'upcoming',
+    priority: 'medium',
+    description: 'LegalDocAI trademark renewal',
+  },
+  {
+    id: 4,
+    title: 'Office Lease Renewal',
+    dueDate: '2025-12-31',
+    category: 'Contract',
+    status: 'upcoming',
+    priority: 'high',
+    description: 'Office space lease agreement renewal',
+  },
+  {
+    id: 5,
+    title: 'PF Filing - September',
+    dueDate: '2025-10-15',
+    category: 'HR',
+    status: 'completed',
+    priority: 'high',
+    description: 'Employee Provident Fund filing',
+  },
+]
+
+export const templates = [
+  {
+    id: 1,
+    name: 'Employment Agreement',
+    category: 'HR',
+    description: 'Standard employment contract compliant with Indian labour laws',
+    clauses: 15,
+    downloads: 1234,
+    verified: true,
+  },
+  {
+    id: 2,
+    name: 'Non-Disclosure Agreement',
+    category: 'Legal',
+    description: 'Comprehensive NDA template for business relationships',
+    clauses: 8,
+    downloads: 2156,
+    verified: true,
+  },
+  {
+    id: 3,
+    name: 'Consultancy Agreement',
+    category: 'Business',
+    description: 'Freelance/consultant service agreement template',
+    clauses: 12,
+    downloads: 987,
+    verified: true,
+  },
+  {
+    id: 4,
+    name: 'Rent Agreement',
+    category: 'Property',
+    description: '11-month rental agreement as per Indian law',
+    clauses: 18,
+    downloads: 3421,
+    verified: true,
+  },
+  {
+    id: 5,
+    name: 'Partnership Deed',
+    category: 'Business',
+    description: 'Partnership agreement for Indian businesses',
+    clauses: 20,
+    downloads: 654,
+    verified: true,
+  },
+  {
+    id: 6,
+    name: 'Service Agreement',
+    category: 'Business',
+    description: 'B2B service contract template',
+    clauses: 14,
+    downloads: 1876,
+    verified: true,
+  },
+]
+
+export const chatHistory = [
+  {
+    id: 1,
+    role: 'user',
+    message: 'Can I quit my job before completing my bond period?',
+    timestamp: '2025-10-28T10:30:00',
+  },
+  {
+    id: 2,
+    role: 'assistant',
+    message: 'In India, employment bonds are enforceable but with limitations. According to the Indian Contract Act, 1872, you can leave before the bond period, but the employer may claim compensation if: 1) They provided specialized training at a cost, 2) The bond amount is reasonable and not punitive. Courts often strike down unreasonable bonds that restrict employment freedom.',
+    timestamp: '2025-10-28T10:30:15',
+  },
+  {
+    id: 3,
+    role: 'user',
+    message: 'What is a reasonable bond amount?',
+    timestamp: '2025-10-28T10:31:00',
+  },
+  {
+    id: 4,
+    role: 'assistant',
+    message: 'A "reasonable" bond amount typically covers actual training costs incurred by the employer. Courts have held that amounts should not be punitive or excessive. Generally, bonds asking for more than the actual training investment or exceeding 6-12 months of salary are often deemed unreasonable. Each case is evaluated based on: training provided, costs incurred, and duration of bond versus compensation.',
+    timestamp: '2025-10-28T10:31:20',
+  },
+]
+
+export const dashboardStats = {
+  totalDocuments: 24,
+  documentsAnalyzed: 18,
+  averageRiskScore: 76,
+  upcomingDeadlines: 8,
+  templatesUsed: 12,
+  complianceRate: 94,
+}
